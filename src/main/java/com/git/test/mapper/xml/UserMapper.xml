@@ -4,12 +4,12 @@
 
     <!-- 通用查询映射结果 -->
     <resultMap id="BaseResultMap" type="com.git.test.entity.User">
-        <id column="ID" property="id" />
-        <result column="USERNAME" property="username" />
-        <result column="PASSWORD" property="password" />
-        <result column="PHONE" property="phone" />
-        <result column="STATUS" property="status" />
-        <result column="SEX" property="sex" />
+        <id column="id" property="id" />
+        <result column="username" property="username" />
+        <result column="password" property="password" />
+        <result column="phone" property="phone" />
+        <result column="status" property="status" />
+        <result column="sex" property="sex" />
         <result column="deleted" property="deleted" />
     </resultMap>
 

@@ -4,36 +4,57 @@ import com.baomidou.mybatisplus.annotation.IdType;
 import com.baomidou.mybatisplus.extension.activerecord.Model;
 import com.baomidou.mybatisplus.annotation.TableId;
 import com.baomidou.mybatisplus.annotation.TableField;
+import lombok.Data;
+
 import java.io.Serializable;
 
 /**
  * <p>
- * 
+ * 用户信息
  * </p>
  *
  * @author  
  * @since 2022-03-03
  */
+@Data
 public class User extends Model<User> {
 
     private static final long serialVersionUID = 1L;
 
-    @TableId(value = "ID", type = IdType.AUTO)
+    /**
+     * id
+     */
+    @TableId(value = "id", type = IdType.AUTO)
     private Integer id;
 
-    @TableField("USERNAME")
+    /**
+     * 用户名
+     */
+    @TableField("username")
     private String username;
 
-    @TableField("PASSWORD")
+    /**
+     * 密码
+     */
+    @TableField("password")
     private String password;
 
-    @TableField("PHONE")
+    /**
+     * 手机号
+     */
+    @TableField("phone")
     private String phone;
 
-    @TableField("STATUS")
+    /**
+     * 状态
+     */
+    @TableField("status")
     private Integer status;
 
-    @TableField("SEX")
+    /**
+     * 性别
+     */
+    @TableField("sex")
     private Integer sex;
 
     /**
@@ -41,78 +62,5 @@ public class User extends Model<User> {
      */
     private Integer deleted;
 
-    public Integer getId() {
-        return id;
-    }
 
-    public User setId(Integer id) {
-        this.id = id;
-        return this;
-    }
-    public String getUsername() {
-        return username;
-    }
-
-    public User setUsername(String username) {
-        this.username = username;
-        return this;
-    }
-    public String getPassword() {
-        return password;
-    }
-
-    public User setPassword(String password) {
-        this.password = password;
-        return this;
-    }
-    public String getPhone() {
-        return phone;
-    }
-
-    public User setPhone(String phone) {
-        this.phone = phone;
-        return this;
-    }
-    public Integer getStatus() {
-        return status;
-    }
-
-    public User setStatus(Integer status) {
-        this.status = status;
-        return this;
-    }
-    public Integer getSex() {
-        return sex;
-    }
-
-    public User setSex(Integer sex) {
-        this.sex = sex;
-        return this;
-    }
-    public Integer getDeleted() {
-        return deleted;
-    }
-
-    public User setDeleted(Integer deleted) {
-        this.deleted = deleted;
-        return this;
-    }
-
-    @Override
-    protected Serializable pkVal() {
-        return this.id;
-    }
-
-    @Override
-    public String toString() {
-        return "User{" +
-            "id=" + id +
-            ", username=" + username +
-            ", password=" + password +
-            ", phone=" + phone +
-            ", status=" + status +
-            ", sex=" + sex +
-            ", deleted=" + deleted +
-        "}";
-    }
 }

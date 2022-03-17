@@ -13,7 +13,7 @@ import java.util.List;
 
 /**
  * <p>
- *  前端控制器
+ *  用户信息前端控制器
  * </p>
  *
  * @author  
@@ -26,8 +26,23 @@ public class UserController {
     @Resource
     private IUserService iUserService;
 
+    /**
+     * 获取所有用户
+     * @return
+     */
     @RequestMapping("list")
     public List<User> list(){
         return iUserService.list();
     }
+
+    /**
+     * 获取单个用户信息
+     * @param id    用户id
+     * @return
+     */
+    @RequestMapping("id")
+    public User user(Integer id){
+        return iUserService.getById(id);
+    }
+
 }
