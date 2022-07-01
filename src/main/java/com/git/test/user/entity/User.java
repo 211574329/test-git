@@ -1,12 +1,10 @@
-package com.git.test.entity;
+package com.git.test.user.entity;
 
 import com.baomidou.mybatisplus.annotation.IdType;
 import com.baomidou.mybatisplus.extension.activerecord.Model;
 import com.baomidou.mybatisplus.annotation.TableId;
 import com.baomidou.mybatisplus.annotation.TableField;
 import lombok.Data;
-
-import java.io.Serializable;
 
 /**
  * <p>

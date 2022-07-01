@@ -44,16 +44,6 @@ public class Generator {
 		strategy.setNaming(NamingStrategy.underline_to_camel);
 		//需要生成的表
 		strategy.setInclude(new String[] {"user"});
-		//排除生成的表
-		//strategy.setExclude(new String[] {"user","test"});
-		//自定义实体父类
-		//strategy.setSuperEntityClass("com.sdk.gosens.entity.User");
-		//自定义mapper父类
-		//strategy.setSuperMapperClass("com.sdk.gosens.mapper.UserMapper");
-		//自定义service父类
-		//strategy.setSuperServiceClass("com.sdk.gosens.service.UserService");
-		//自定义service实现类
-		//strategy.setSuperServiceImplClass("com.sdk.gosens.service.impl.UserServiceImpl");
 		strategy.setEntityBuilderModel(true);
 		generator.setStrategy(strategy);
 		

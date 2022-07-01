@@ -1,8 +1,8 @@
-package com.git.test.service.impl;
+package com.git.test.user.service.impl;
 
-import com.git.test.entity.User;
-import com.git.test.mapper.UserMapper;
-import com.git.test.service.IUserService;
+import com.git.test.user.entity.User;
+import com.git.test.user.mapper.UserMapper;
+import com.git.test.user.service.IUserService;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import org.springframework.stereotype.Service;
 

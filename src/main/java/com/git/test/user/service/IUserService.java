@@ -1,6 +1,6 @@
-package com.git.test.service;
+package com.git.test.user.service;
 
-import com.git.test.entity.User;
+import com.git.test.user.entity.User;
 import com.baomidou.mybatisplus.extension.service.IService;
 
 /**

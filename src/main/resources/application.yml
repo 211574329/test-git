@@ -76,11 +76,8 @@ mybatis-plus:
   type-aliases-package: com.git.test.entity
   #mapper文件路径Mapper.xml
   mapper-locations:
-    - classpath*:com/git/test/mapper/xml/*Mapper.xml
+    - classpath*:com/git/test/**/*.xml
 
 logging:
   level:
-    com:
-      git:
-        test:
-          mapper: debug
+    com.git.test.user.mapper: debug

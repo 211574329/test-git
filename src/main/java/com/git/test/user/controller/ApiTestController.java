@@ -1,9 +1,9 @@
-package com.git.test.controller;
+package com.git.test.user.controller;
 
-import com.git.test.dto.RestBean;
-import com.git.test.entity.User;
-import com.git.test.service.IUserService;
-import com.git.test.vo.QueryVo;
+import com.git.test.common.R;
+import com.git.test.user.entity.User;
+import com.git.test.user.service.IUserService;
+import com.git.test.user.vo.QueryVo;
 import org.springframework.web.bind.annotation.*;
 
 import javax.annotation.Resource;
@@ -26,8 +26,8 @@ public class ApiTestController {
      * @return
      */
     @RequestMapping("user1")
-    public RestBean<User> user1(Integer id) {
-        return RestBean.success(iUserService.getById(id));
+    public R<User> user1(Integer id) {
+        return R.success(iUserService.getById(id));
     }
 
     /**
@@ -36,8 +36,8 @@ public class ApiTestController {
      * @return
      */
     @RequestMapping("user2/{id}")
-    public RestBean<User> user2(@PathVariable Integer id) {
-        return RestBean.success(iUserService.getById(id));
+    public R<User> user2(@PathVariable Integer id) {
+        return R.success(iUserService.getById(id));
     }
 
     /**
@@ -46,8 +46,8 @@ public class ApiTestController {
      * @return
      */
     @PostMapping("user3")
-    public RestBean<User> user3(QueryVo queryVo) {
-        return RestBean.success(iUserService.getById(queryVo.getId()));
+    public R<User> user3(QueryVo queryVo) {
+        return R.success(iUserService.getById(queryVo.getId()));
     }
 
 
@@ -58,8 +58,8 @@ public class ApiTestController {
      * @return
      */
     @PostMapping("user4")
-    public RestBean<User> user4(@RequestBody QueryVo queryVo) {
-        return RestBean.success(iUserService.getById(queryVo.getId()));
+    public R<User> user4(@RequestBody QueryVo queryVo) {
+        return R.success(iUserService.getById(queryVo.getId()));
     }
 
     /**
@@ -68,8 +68,8 @@ public class ApiTestController {
      * @return
      */
     @RequestMapping("listUser")
-    public RestBean<List<User>> user() {
-        return RestBean.success(iUserService.list());
+    public R<List<User>> user() {
+        return R.success(iUserService.list());
     }
 
 }

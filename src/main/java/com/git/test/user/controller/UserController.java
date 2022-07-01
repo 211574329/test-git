@@ -1,11 +1,10 @@
-package com.git.test.controller;
+package com.git.test.user.controller;
 
 
-import com.git.test.entity.User;
-import com.git.test.service.IUserService;
+import com.git.test.user.entity.User;
+import com.git.test.user.service.IUserService;
 import org.springframework.web.bind.annotation.RequestMapping;
 
-import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RestController;
 
 import javax.annotation.Resource;

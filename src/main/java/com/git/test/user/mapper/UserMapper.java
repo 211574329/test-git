@@ -1,6 +1,6 @@
-package com.git.test.mapper;
+package com.git.test.user.mapper;
 
-import com.git.test.entity.User;
+import com.git.test.user.entity.User;
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
 
 /**
